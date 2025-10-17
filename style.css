@@ -1,0 +1,240 @@
+/* ------------------------------
+   GLOBAL STYLES
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdf6f0; /* Soft beige background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   NAVBAR
+-------------------------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #7d4b3a; /* Clay brown */
+    letter-spacing: 1px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #f4c2c2; /* Rose blush highlight */
+    transform: translateY(-3px);
+}
+
+/* ------------------------------
+   HERO SECTION
+-------------------------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(to bottom right, #fdf6f0, #eae0d5); /* Light cream gradient */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #7d4b3a; /* Clay brown */
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #f4c2c2; /* Rose blush */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e09b9b;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ------------------------------
+   DARK SECTION
+-------------------------------- */
+.dark-section {
+    background-color: #2c2c2c; /* Charcoal black */
+    color: #fdf6f0; /* Soft beige text */
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.dark-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f4c2c2; /* Rose blush */
+}
+
+.dark-section p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* ------------------------------
+   RESPONSIVE
+-------------------------------- */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar nav ul {
+        gap: 1rem;
+    }
+}
+
+/* ------------------------------
+   GALLERY CARDS
+-------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background-color: #3a3a3a; /* Slightly lighter dark section */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card-info {
+    padding: 1rem;
+    color: #fdf6f0;
+}
+
+.card-info h3 {
+    margin-bottom: 0.5rem;
+    color: #f4c2c2; /* Rose blush */
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+}
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+.footer {
+    background-color: #7d4b3a; /* Clay brown */
+    color: #fdf6f0;
+    text-align: center;
+    padding: 3rem 2rem 1rem 2rem;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #fdf6f0;
+}
+
+.footer .socials a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #f4c2c2; /* Rose blush */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #ddd;
+}
+
+/* Smooth Scroll for all links */
+html {
+    scroll-behavior: smooth;
+}
