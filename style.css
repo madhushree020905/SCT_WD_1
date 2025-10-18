@@ -563,25 +563,27 @@ html {
     text-decoration: none;
     font-weight: 500;
 }
-@media screen and (max-width: 600px) {
-  .top-bar {
-    flex-direction: column; /* stack items vertically */
-    align-items: center;    /* center horizontally */
-  }
-  .top-bar span {
-    margin: 5px 0;         /* spacing between items */
-    font-size: 14px;       /* slightly smaller text */
-  }
+@media screen and (max-width: 768px) {
+    /* Keep navbar items horizontal */
+    .navbar nav ul {
+        flex-direction: row; /* horizontal layout */
+        justify-content: center; /* center on small screens */
+        gap: 1rem; /* optional, small spacing */
+    }
+
+    .navbar nav ul li {
+        margin: 0; /* remove vertical margins */
+    }
+
+    /* Adjust button/padding if needed */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
 }
 
-.section {
-  display: flex;
-  justify-content: space-around; /* horizontal layout */
-  flex-wrap: wrap; /* allows items to move to next line if screen is narrow */
+.navbar nav ul {
+    overflow-x: auto;
 }
-
-.section div {
-  flex: 1 1 200px; /* items shrink but have minimum width */
-  margin: 10px;
-}
-
