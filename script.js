@@ -12,3 +12,54 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
     }
 });
+// Light/Dark Mode Toggle
+const toggleBtn = document.getElementById("toggle-btn");
+const body = document.body;
+
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    
+    // Change button icon
+    if(body.classList.contains("dark-mode")){
+        toggleBtn.textContent = "☀️"; // Sun icon for light mode
+    } else {
+        toggleBtn.textContent = "🌙"; // Moon icon for dark mode
+    }
+});
+// Modal functionality
+const modal = document.getElementById("buyModal");
+const closeBtn = document.querySelector(".close-btn");
+const buyButtons = document.querySelectorAll(".buy-btn");
+const buyForm = document.getElementById("buyForm");
+
+// Open modal when any buy button is clicked
+buyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+});
+
+// Close modal when X is clicked
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Close modal when clicking outside modal-content
+window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Handle form submission
+buyForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // prevent page refresh
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const address = document.getElementById("address").value;
+    const payment = document.getElementById("payment").value;
+
+    alert(`Thank you, ${name}!\nWe will contact you at ${email}.\nPayment Method: ${payment}`);
+    modal.style.display = "none";
+    buyForm.reset();
+});
