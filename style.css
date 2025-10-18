@@ -33,7 +33,7 @@ body {
 .navbar .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #101010; /* Clay brown */
+    color: #ffffff; /* Clay brown */
     letter-spacing: 1px;
 }
 
@@ -45,7 +45,7 @@ body {
 
 .navbar nav ul li a {
     text-decoration: none;
-    color: #101010;
+    color: #ffffff;
     font-weight: 500;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -71,7 +71,7 @@ body {
 
 .hero h1 {
     font-size: 3rem;
-    color: #56352a; /* Clay brown */
+    color: #7d4b3a; /* Clay brown */
     margin-bottom: 1rem;
 }
 
@@ -526,4 +526,13 @@ html {
     .footer-content .socials a {
         font-size: 0.9rem;
     }
+}
+/* Navbar background fixed brown */
+.navbar {
+    position: fixed; /* stays at top */
+    width: 100%;
+    background-color: #7d4b3a; /* your brown color */
+    z-index: 1000;
+    padding: 1rem 2rem;
+    transition: none; /* remove any transition color change */
 }
