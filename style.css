@@ -563,16 +563,25 @@ html {
     text-decoration: none;
     font-weight: 500;
 }
-
-/* Optional: make it slightly smaller on mobile */
-@media screen and (max-width: 768px) {
-    .navbar {
-        padding: 0.5rem 1rem;
-    }
-    .navbar nav ul {
-        gap: 1rem;
-    }
-    .navbar nav ul li a {
-        font-size: 0.9rem;
-    }
+@media screen and (max-width: 600px) {
+  .top-bar {
+    flex-direction: column; /* stack items vertically */
+    align-items: center;    /* center horizontally */
+  }
+  .top-bar span {
+    margin: 5px 0;         /* spacing between items */
+    font-size: 14px;       /* slightly smaller text */
+  }
 }
+
+.section {
+  display: flex;
+  justify-content: space-around; /* horizontal layout */
+  flex-wrap: wrap; /* allows items to move to next line if screen is narrow */
+}
+
+.section div {
+  flex: 1 1 200px; /* items shrink but have minimum width */
+  margin: 10px;
+}
+
