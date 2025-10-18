@@ -12,20 +12,6 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
     }
 });
-// Light/Dark Mode Toggle
-const toggleBtn = document.getElementById("toggle-btn");
-const body = document.body;
-
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    
-    // Change button icon
-    if(body.classList.contains("dark-mode")){
-        toggleBtn.textContent = "☀️"; // Sun icon for light mode
-    } else {
-        toggleBtn.textContent = "🌙"; // Moon icon for dark mode
-    }
-});
 // Modal functionality
 const modal = document.getElementById("buyModal");
 const closeBtn = document.querySelector(".close-btn");
